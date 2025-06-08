@@ -1,22 +1,30 @@
-// Navbar toggle for mobile
-const toggle = document.getElementById("nav-toggle");
+// Initialize AOS
+AOS.init({
+  duration: 800,
+  easing: "ease-in-out",
+  once: true,
+  mirror: false,
+});
+
+// Mobile Navigation Toggle
+const navToggle = document.getElementById("nav-toggle");
 const navLinks = document.getElementById("nav-links");
 const body = document.body;
 
-toggle.addEventListener("click", () => {
-  toggle.classList.toggle("active");
+navToggle.addEventListener("click", () => {
   navLinks.classList.toggle("show");
+  navToggle.classList.toggle("active");
   body.style.overflow = navLinks.classList.contains("show") ? "hidden" : "";
 });
 
 // Close mobile menu when clicking outside
 document.addEventListener("click", (e) => {
   if (
-    !toggle.contains(e.target) &&
+    !navToggle.contains(e.target) &&
     !navLinks.contains(e.target) &&
     navLinks.classList.contains("show")
   ) {
-    toggle.classList.remove("active");
+    navToggle.classList.remove("active");
     navLinks.classList.remove("show");
     body.style.overflow = "";
   }
@@ -25,7 +33,7 @@ document.addEventListener("click", (e) => {
 // Close mobile menu when clicking a link
 navLinks.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => {
-    toggle.classList.remove("active");
+    navToggle.classList.remove("active");
     navLinks.classList.remove("show");
     body.style.overflow = "";
   });
@@ -81,49 +89,5 @@ navItems.forEach((item) => {
   });
 });
 
-// Scroll reveal animations
-const reveals = document.querySelectorAll(".reveal");
-
-function revealOnScroll() {
-  for (let i = 0; i < reveals.length; i++) {
-    const windowHeight = window.innerHeight;
-    const elementTop = reveals[i].getBoundingClientRect().top;
-    const revealPoint = 150;
-
-    if (elementTop < windowHeight - revealPoint) {
-      reveals[i].classList.add("visible");
-    }
-  }
-}
-
-window.addEventListener("scroll", () => {
-  revealOnScroll();
-  setActiveNavItem();
-});
-window.addEventListener("load", () => {
-  revealOnScroll();
-  setActiveNavItem();
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
-      });
-    },
-    {
-      threshold: 0.1,
-      rootMargin: "0px 0px -50px 0px",
-    }
-  );
-
-  // Observe all elements with animation classes
-  document
-    .querySelectorAll(".slide-in-left, .slide-in-right, .reveal")
-    .forEach((el) => {
-      observer.observe(el);
-    });
-});
+// Update active nav item on scroll
+window.addEventListener("scroll", setActiveNavItem);
