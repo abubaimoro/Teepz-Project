@@ -722,6 +722,12 @@ nav a:hover {
   transform: scale(1.05);
 }
 
+.btn-join {
+  padding: 20px;
+  border-radius: 1.5rem;
+  
+}
+
 /* Community Section Responsive Styles */
 @media (max-width: 1200px) {
   .community-content {
@@ -865,13 +871,13 @@ nav a:hover {
 }
 
 #download h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 1.5rem;
   color: black;
 }
 
 #download p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   max-width: 700px;
   margin: 0 auto 3rem;
   color: black;
@@ -928,11 +934,11 @@ nav a:hover {
 
 @media (max-width: 768px) {
   #download h2 {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
   #download p {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
   }
 
   .download-buttons {
