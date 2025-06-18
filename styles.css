@@ -722,10 +722,53 @@ nav a:hover {
   transform: scale(1.05);
 }
 
+.join {
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
 .btn-join {
-  padding: 20px;
-  border-radius: 1.5rem;
-  
+  padding: 16px 32px;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(135deg, #b549fa, #8a2be2);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(181, 73, 250, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-join::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.btn-join:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(181, 73, 250, 0.4);
+  background: linear-gradient(135deg, #8a2be2, #b549fa);
+}
+
+.btn-join:hover::before {
+  left: 100%;
 }
 
 /* Community Section Responsive Styles */
