@@ -93,7 +93,7 @@ nav a:hover {
 
 .hero {
   height: 100vh;
-  background: url("./assets/IMG_0768.jpeg") no-repeat center center/cover;
+  background: url("../assets/IMG_0768.jpeg") no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -253,6 +253,7 @@ nav a:hover {
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
 }
 
 .feature-card:hover {
