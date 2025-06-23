@@ -835,6 +835,24 @@ nav a:hover {
   left: 100%;
 }
 
+.btn-join.whatsapp {
+  background: linear-gradient(135deg, limegreen, #25d366);
+  color: #fff;
+  box-shadow: 0 8px 25px rgba(50, 205, 50, 0.2);
+}
+
+.btn-join.whatsapp i {
+  color: #fff;
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+.btn-join.whatsapp:hover {
+  background: linear-gradient(135deg, #25d366, limegreen);
+  box-shadow: 0 15px 35px rgba(50, 205, 50, 0.3);
+  color: #fff;
+}
+
 /* Community Section Responsive Styles */
 @media (max-width: 1200px) {
   .community-content {
