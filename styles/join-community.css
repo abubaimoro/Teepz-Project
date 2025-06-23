@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background: linear-gradient(to bottom right, #f8f0ff, #e6f8ee);
-  font-family: "Segoe UI", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .form-container {
@@ -95,6 +95,9 @@ h2 {
 }
 
 .checkbox-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: left;
   font-size: 14px;
   margin-bottom: 1.5rem;
@@ -157,6 +160,9 @@ h2 {
     height: 36px;
     padding-left: 2rem;
   }
+  .input-group select {
+    padding-left: 2.2rem;
+  }
   .checkbox-group {
     text-align: center;
     font-size: 13px;
@@ -182,5 +188,8 @@ h2 {
     font-size: 14px;
     height: 32px;
     padding-left: 1.5rem;
+  }
+  .input-group select {
+    padding-left: 2rem;
   }
 }
