@@ -13,7 +13,8 @@ body {
   background-color: #f9f9f9;
   color: #041a22;
   line-height: 1.6;
-  padding-top: 72px; /* Height of the header */
+  padding-top: 72px;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -278,6 +279,68 @@ nav a:hover {
   color: #666;
   line-height: 1.6;
   font-size: 0.95rem;
+}
+
+.learn-btn {
+  background-color: #b549fa;
+  color: #fff;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.75rem 2.2rem;
+  margin-top: 10px;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 4px 16px rgba(181, 73, 250, 0.12);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.learn-btn::after {
+  display: none;
+}
+
+.learn-btn:hover,
+.learn-btn:focus {
+  background-color: #8a2be2;
+  color: #fff;
+  transform: none;
+  box-shadow: 0 4px 16px rgba(181, 73, 250, 0.12);
+}
+
+@media (max-width: 768px) {
+  .learn-btn {
+    width: 100%;
+    font-size: 0.97rem;
+    padding: 0.7rem 1.2rem;
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .learn-btn {
+    width: 100%;
+    font-size: 0.93rem;
+    padding: 0.65rem 0.8rem;
+    margin-top: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+  }
 }
 
 /* Animation Classes */
