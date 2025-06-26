@@ -1077,3 +1077,38 @@ nav a:hover {
     justify-content: center;
   }
 }
+
+/* Solution Section Custom Styles */
+.solution-how-it-works p {
+  margin-bottom: 2rem;
+}
+
+.how-it-works-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 900px) {
+  .solution-how-it-works {
+    padding: 2rem 1rem;
+  }
+  .how-it-works-image img {
+    max-width: 95vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .solution-how-it-works h2 {
+    font-size: 1.5rem;
+  }
+  .solution-how-it-works p {
+    font-size: 1rem;
+  }
+  .how-it-works-image img {
+    max-width: 100vw;
+  }
+}
