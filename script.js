@@ -106,7 +106,7 @@ document.getElementById('community-form').addEventListener('submit', async (e) =
     };
 
     try {
-      const res = await fetch('https://teepz-backend.onrender.com', {
+      const res = await fetch('https://teepz-backend.onrender.com/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
